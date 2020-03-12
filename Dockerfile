@@ -1,8 +1,5 @@
-FROM teemow/npm
+FROM bitnami/minideb:buster
 MAINTAINER Ahmet BARIS <barisahmet@gmail.com>
 
+RUN install_packages ffmpeg npm
 RUN sudo npm install -g castnow
-
-RUN sudo pacman -S ffmpeg --noconfirm
-
-ENTRYPOINT ["/usr/bin/castnow"]
