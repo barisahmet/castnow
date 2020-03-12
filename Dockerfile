@@ -3,8 +3,6 @@ MAINTAINER Ahmet BARIS <barisahmet@gmail.com>
 
 RUN sudo npm install -g castnow
 
-RUN apt-get -y update
-RUN apt-get -y upgrade
-RUN apt-get install -y ffmpeg
+RUN sudo sudo pacman -S ffmpeg --noconfirm
 
 ENTRYPOINT ["/usr/bin/castnow"]
